@@ -1,0 +1,27 @@
+RBF         time length    time step    neighbors,    lambda 1    lambda 2    lambda 3
+--------  -------------  -----------  ------------  ----------  ----------  ----------
+gaussian            180         0.01            50   0.0323797  0.00138742    -0.91939RBF         time length    time step    neighbors,    lambda 1    lambda 2    lambda 3
+--------  -------------  -----------  ------------  ----------  ----------  ----------
+gaussian            180         0.01            50   0.0323797  0.00138742    -0.91939RBF         time length    time step    neighbors,    lambda 1     lambda 2    lambda 3
+--------  -------------  -----------  ------------  ----------  -----------  ----------
+gaussian           1000         0.01            50   0.0670752  0.000405778    -1.69032RBF         time length    time step    neighbors,    lambda 1      lambda 2    lambda 3
+--------  -------------  -----------  ------------  ----------  ------------  ----------
+gaussian           2000         0.01            50    0.069549  -0.000608606    -1.53759RBF         time length    time step    neighbors,    lambda 1    lambda 2    lambda 3
+--------  -------------  -----------  ------------  ----------  ----------  ----------
+gaussian           1000          0.1            50   0.0559489  -0.0302194    -2.59748RBF         time length    time step    neighbors,    lambda 1     lambda 2    lambda 3
+--------  -------------  -----------  ------------  ----------  -----------  ----------
+gaussian           1000         0.05            50   0.0695828  -0.00497013    -1.95738RBF         time length    time step    neighbors,    lambda 1      lambda 2    lambda 3
+--------  -------------  -----------  ------------  ----------  ------------  ----------
+gaussian           1000        0.005            50   0.0660092  -8.18815e-05    -1.44486RBF         time length    time step    neighbors,    lambda 1     lambda 2    lambda 3
+--------  -------------  -----------  ------------  ----------  -----------  ----------
+gaussian           1000         0.01           100   0.0670358  0.000614184    -1.79644RBF         time length    time step    neighbors,    lambda 1     lambda 2    lambda 3
+--------  -------------  -----------  ------------  ----------  -----------  ----------
+gaussian           1000         0.01           150   0.0669915  0.000366926    -1.66476RBF             time length    time step    neighbors,    lambda 1     lambda 2    lambda 3
+------------  -------------  -----------  ------------  ----------  -----------  ----------
+multiquadric           1000         0.01            50   0.0670853  0.000419429    -1.63496RBF        time length    time step    neighbors,    lambda 1     lambda 2    lambda 3
+-------  -------------  -----------  ------------  ----------  -----------  ----------
+inverse           1000         0.01            50   0.0670964  0.000517378    -1.71732RBF         time length    time step    neighbors,    lambda 1      lambda 2    lambda 3
+--------  -------------  -----------  ------------  ----------  ------------  ----------
+gaussian           1000        0.001            50   0.0687768  -0.000587808    -1.06623RBF         time length    time step    neighbors,    lambda 1    lambda 2    lambda 3
+--------  -------------  -----------  ------------  ----------  ----------  ----------
+gaussian            180        0.001            50   0.0290489   0.0011676   -0.228423

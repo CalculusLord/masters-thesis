@@ -1,0 +1,21 @@
+% You insert your abstract in the space below.
+
+
+This work develops a globally convergent, data driven algorithm for estimating the Lyapunov exponents of a dynamical system.
+This work rigorously tests our algorithm with two dynamical systems: The Lorenz equation and the Rossler equation. Additionally
+the algorithm is used to approximate the Lyapunov exponents of two additional dynamical systems, the Chua equation, and
+the Li equation \textit{Li et al.} \cite{item:6}.
+The time series used as data points for the dynamical system was obtained
+by numerical integration with the fourth-order Runge-Kutta scheme. Our algorithm then interpolates the time series
+using radial basis functions. Three basic functions\texttwelveudash Gaussian, multiquadrics, and inverse\texttwelveudash
+were tested using our algorithm. The shape parameter of the basic function was optimized using an algorithm
+developed by \textit{Rippa} \cite{item:3}.
+Our interpolation algorithm is used to produce a numerical approximation of the given dynamical system's Jacobian.
+The Lyapunov exponents of the system are calculated by performing a QR-decomposition on the Jacobian approximation. We conducted
+several trials with Lorenz and Rossler by varying the simulation parameters $t$, $dt$, and nearest neighbors.
+Our trials provided good approximations of the Lorenz Lyapunov exponents except for two trials where $t=90$ and one where $dt=0.1$.
+Our algorithm also produced good approximations of the Lyapunov exponents for the Chua and Li equations. However, the
+algorithm struggled providing accurate approximations of the minimal Lyapunov exponent for Rossler but provided
+accurate approximations for Rossler's maximal Lyapunov exponenent.
+
+

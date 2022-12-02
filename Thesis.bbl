@@ -1,0 +1,120 @@
+\begin{thebibliography}{10}
+
+\bibitem{item:17}
+{\sc K.~T. Alligood, T.~D. Sauer, and J.~A. Yorke}, {\em Chaos: An Introduction
+  to Dynamical Systems}, Springer, New York, 1996.
+
+\bibitem{item:13}
+{\sc L.~O. Chua}, {\em Chua circuit}, Scholarpedia, 2 (2007), p.~1488.
+\newblock revision \#140932.
+
+\bibitem{item:21}
+{\sc W.~S. Cleveland and C.~Loader}, {\em Smoothing by local regression:
+  Principles and methods}, in Statistical Theory and Computational Aspects of
+  Smoothing, W.~H{\"a}rdle and M.~G. Schimek, eds., Heidelberg, 1996,
+  Physica-Verlag HD, pp.~10--49.
+
+\bibitem{item:10}
+{\sc C.~W. Curtis, D.~J. Alford{-}Lago, and O.~Issan}, {\em Deep learning
+  enhanced dynamic mode decomposition}, CoRR, abs/2108.04433 (2021).
+
+\bibitem{item:22}
+{\sc M.-F. DANCA and G.~CHEN}, {\em Bifurcation and chaos in a complex model of
+  dissipative medium}, International Journal of Bifurcation and Chaos, 14
+  (2004), pp.~3409--3447.
+
+\bibitem{item:7}
+{\sc L.~Dieci, R.~Russell, and E.~Vleck}, {\em On the compuation of lyapunov
+  exponents for continuous dynamical systems}, Siam Journal on Numerical
+  Analysis - SIAM J NUMER ANAL, 34 (1997).
+
+\bibitem{item:18}
+{\sc J.~P. Eckmann, S.~O. Kamphorst, D.~Ruelle, and S.~Ciliberto}, {\em
+  Liapunov exponents from time series}, Phys. Rev. A, 34 (1986),
+  pp.~4971--4979.
+
+\bibitem{item:1}
+{\sc G.~E. Faushauer}, {\em Meshfree Approximation Methods with MATLAB}, vol.~6
+  of Interdisciplinary Mathematical Sciences, World Scientific Publishing Co.,
+  Singapore, 2007.
+
+\bibitem{item:20}
+{\sc W.~Gilpin}, {\em Deep reconstruction of strange attractors from time
+  series},  (2020).
+
+\bibitem{item:11}
+{\sc J.~Gleick}, {\em Chaos: Making a New Science}, Open Road Media, New York,
+  2011.
+
+\bibitem{item:16}
+{\sc R.~Haberman}, {\em Applied Partial Differential Equations}, Pearson, Upper
+  Saddle River, New Jersey, 5~ed., 2013.
+
+\bibitem{item:5}
+{\sc M.~B. Kennel, R.~Brown, and H.~D.~I. Abarbanel}, {\em Determining
+  embedding dimension for phase-space reconstruction using a geometrical
+  construction}, Phys. Rev. A, 45 (1992), pp.~3403--3411.
+
+\bibitem{item:19}
+{\sc D.~C. Lay}, {\em Linear Algebra}, Addison Wesley, Boston, 4~ed., year.
+
+\bibitem{item:6}
+{\sc C.~Li, J.~C. Sprott, W.~Thio, and H.~Zhu}, {\em A unique signum switch for
+  chaos and hyperchaos}, 08 2015.
+
+\bibitem{item:25}
+{\sc E.~N. Lorenz}, {\em Deterministic nonperiodic flow}, Journal of
+  Atmospheric Sciences, 20 (1963), pp.~130 -- 141.
+
+\bibitem{item:14}
+{\sc T.~Matsumoto}, {\em A chaotic attractor from chua's circuit}, IEEE
+  Transactions on Circuits and Systems, 31 (1984), pp.~1055--1058.
+
+\bibitem{item:9}
+{\sc C.~Meador and Marshall}, {\em A comparison of two 4 th-order numerical
+  ordinary differential equation methods applied to the rabinovich-fabrikant
+  equations}, 2009.
+
+\bibitem{item:8}
+{\sc C.-E.~E. Meador}, {\em Numerical calculation of lyapunov exponents for
+  three-dimensional systems of ordinary differential equations}.
+
+\bibitem{item:15}
+{\sc M.~I. {Rabinovich} and A.~L. {Fabrikant}}, {\em {Stochastic wave
+  self-modulation in nonequilibrium media}}, Zhurnal Eksperimentalnoi i
+  Teoreticheskoi Fiziki, 77 (1979), pp.~617--629.
+
+\bibitem{item:24}
+{\sc L.~M. Resler}, {\em Edward n lorenz's 1963 paper, ``deterministic
+  nonperiodic flow'', in journal of the atmospheric sciences, vol 20, pages
+  130--141: Its history and relevance to physical geography}, Progress in
+  Physical Geography: Earth and Environment, 40 (2016), pp.~175--180.
+
+\bibitem{item:3}
+{\sc S.~Rippa}, {\em An algorithm for selecting a good parameter c in radial
+  basis function interpolation}, Advances in Computational Mathematics, 11
+  (1999), pp.~193--210.
+
+\bibitem{item:12}
+{\sc O.~R{\"o}ssler}, {\em An equation for continuous chaos}, Physics Letters
+  A, 57 (1976), pp.~397--398.
+
+\bibitem{item:26}
+{\sc B.~Saltzman}, {\em Finite amplitude free convection as an initial value
+  problem---i}, Journal of Atmospheric Sciences, 19 (1962), pp.~329 -- 341.
+
+\bibitem{item:2}
+{\sc S.~H. Strogatz}, {\em Nonlinear Dynamics and Chaos}, World Scientific
+  Publishing Co., Singapore, 2~ed., 2007.
+
+\bibitem{item:4}
+{\sc A.~Wolf, J.~B. Swift, H.~L. Swinney, and J.~A. Vastano}, {\em Determining
+  lyapunov exponents from a time series}, Physica D: Nonlinear Phenomena, 16
+  (1985), pp.~285--317.
+
+\bibitem{item:23}
+{\sc G.-Q. Zhong and F.~Ayrom}, {\em Experimental confirmation of chaos from
+  chua's circuit}, International Journal of Circuit Theory and Applications, 13
+  (1985), pp.~93--98.
+
+\end{thebibliography}

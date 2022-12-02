@@ -1,0 +1,232 @@
+%! Author = nate
+%! Date = 2/3/22
+% Preamble
+\documentclass[12pt]{sdsu-thesis}
+
+%% Packages
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage[bf,labelsep=period,textfont=bf]{caption}
+\usepackage[normalem]{ulem}
+\usepackage[document]{ragged2e}
+%
+%
+\theoremstyle{theorem}
+%\newtheorem{theorem}{Theorem}[section]
+
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+
+\newtheorem{theorem}    {Theorem}[chapter]
+\newtheorem{corollary}  [theorem]{Corollary}
+\newtheorem{definition} [theorem]{Definition}
+\newtheorem{example}    [theorem]{Example}
+\newtheorem{lemma}      [theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}     [theorem]{Remark}
+
+%\theoremstyle{remark}
+%\newtheorem*{remark}{Remark}
+
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\graphicspath{
+    {Plots}
+}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    citecolor=red
+}
+%\usepackage{textcomp}
+%\newcommand{\subtitle}[1]{%
+%  \posttitle{%
+%    \par\end{center}
+%    \begin{center}\LARGE#1\end{center}
+%    \vskip0.5em}%
+%}
+%
+%\usepackage{datatool}% http://ctan.org/pkg/datatool
+%\newcommand{\sortitem}[1]{%
+%  \DTLnewrow{list}% Create a new entry
+%  \DTLnewdbentry{list}{description}{#1}% Add entry as description
+%}
+%\newenvironment{sortedlist}{%
+%  \DTLifdbexists{list}{\DTLcleardb{list}}{\DTLnewdb{list}}% Create new/discard old list
+%}{%
+%  \DTLsort*{description}{list}% Sort list
+%  \begin{enumerate}%
+%    \DTLforeach*{list}{\theDesc=description}{%
+%      \item \theDesc}% Print each item
+%  \end{enumerate}%
+%}
+
+
+% Title Page
+%\begin{document}
+%\title{\textbf{San Diego State University
+%\\{\Large Department of Mathematics}}}
+%\subtitle{Meshfree data driven scattered interpolation estimates of lyapunov exponents using optimized radial basis functions}
+%\author{Nathanael J. Reynolds \\ \\
+%        Advisor \\
+%        Christopher W. Curtis}
+% ======================================================================
+% ======================================================================
+% You definitely need to edit things BELOW this line
+% ======================================================================
+% ======================================================================
+
+% Author name and the author name in upper case
+% (FORMAT) Has to match university records, check if you have
+% (FORMAT) full middle name, or middle initital on record.
+\author{Nathanael J. Reynolds}
+
+
+% Title of the thesis (all in upper case), use \\ for line breaks as
+% usual, you can use up to 4 lines and make sure to set the counter
+% titlelines to the number of lines you used.
+%
+% This is for the title page
+%
+\title{MESHFREE DATA DRIVEN SCATTERED INTERPOLATION ESTIMATES OF LYAPUNOV EXPONENTS USING OPTIMIZED RADIAL BASIS FUNCTIONS}
+% Number of lines in the title, without setting this the title page
+% will not be formatted properly
+\setcounter{titlelines}{4}
+
+
+% Heading style title, the number of lines can be different here then
+% in titlelines and in fact the thesis manual requires that this be at
+% most 3 lines long so only put at most 2 pagebreaks here.  This is
+% for the abstract pages and the signature page.
+%
+% (FORMAT) Make sure that this title has the EXACT same words at the
+% (FORMAT) title-page-title
+%
+\titleheading{MESHFREE DATA DRIVEN SCATTERED INTERPOLATION ESTIMATES OF LYAPUNOV EXPONENTS USING OPTIMIZED RADIAL BASIS FUNCTIONS}
+
+
+% (FORMAT) The "degree" is set on three lines; select one of the
+% following formats.  See DTM P.41
+%
+% Degree (MA-Math)
+%\degreeONE{Master of Arts}
+%\degreeTWO{in}
+%\degreeTHREE{Mathematics}
+
+% Degree (MS-Math)
+%\degreeONE{Master of Science}
+%\degreeTWO{in}
+%\degreeTHREE{Mathematics}
+
+% Degree (with Concentration)
+\degreeONE{Master of Science in Applied Mathematics}
+\degreeTWO{with a Concentration in}
+\degreeTHREE{Dynamical Systems}
+
+% Degree (dual, concurrent)
+%\degreeONE{Master of Science in Applied Mathematics}
+%\degreeTWO{and}
+%\degreeTHREE{Master of Science in Theoretical Typography}
+
+
+% ======================================================================
+% If you need to change the word 'Thesis' use \thesisname{Blah} and if
+% you need to change the middle line between \degree and \degreein on
+% the titlepage to something other then 'in' use \inofand{of} to use
+% 'of' for instance.  (This should not be necessary)
+% ======================================================================
+
+
+% Dates
+\gradyear{2022}
+% (Format) Term Year
+\submitdate{Spring 2022}
+
+
+% ======================================================================
+% Thesis Committee
+% ======================================================================
+%
+% Your committee chair (don't include titles as per the manual)
+% (FORMAT) Do not include the institution ("SDSU") for local faculty
+% (FORMAT) members; however, for external members DO include the
+% (FORMAT) institution.
+\committeechair{Christopher W. Curtis}
+\committeechairdept{Department of Mathematics and Statistics}
+
+% Second committee member
+\committeesecond{Bowen Shen}
+\committeeseconddept{Department of Mathematics and Statistics}
+
+% Third (usually different department) committee member
+\committeethird{Arlette Baljon}
+\committeethirddept{Department of Physics}
+
+% Document
+\begin{document}
+    \justifying
+    % Title page
+    % (FORMAT) Mandatory for SDSU thesis
+    \maketitle
+
+    % Signature page
+    % (FORMAT) Mandatory for SDSU thesis
+    \makesignature
+
+    % Copyright page
+    % (FORMAT) Mandatory for SDSU thesis
+    \begin{copyrightpage}
+      Copyright~\copyright~2022 \\
+      by \\
+      Nathanael J. Reynolds
+    \end{copyrightpage}
+
+    \begin{dedication}
+      \vspace{3in}
+      \centering
+      For my mother, Laurie Reynolds, who has always supported me, Perri Gellman, for putting me down the road
+            of mathematics, and the Puyallup Tribe of Indians whom without their financial support, this would not be possible.
+    \end{dedication}
+
+    \begin{epigraph}
+      We are all apprentices in a craft where no one ever becomes a master.\\
+      \begin{flushright}
+        -- Ernest Hemingway
+      \end{flushright}
+    \end{epigraph}
+
+    \begin{abstract}
+      % This just inserts the the abstract.tex file
+      \input{abstract}
+    \end{abstract}
+
+    \tableofcontents
+
+    \listoftables
+
+    \listoffigures
+
+    \begin{acknowledgments}
+      I would like to thank Dr. Curtis for guidance on this topic and his personal
+      kindness, Dr. Shen for his expertise on the Lornenz system and
+      providing resources and feedback for this thesis,
+      Joe Diaz for his positivity and always being helpful no matter what the need was, Shashwat Sharan
+      for his friendship and his help in getting me through tough classes,
+      Andrew Tuma for giving me a sense of camaraderie through this thesis writing process,
+      Jay Lago for always being there to answer questions about research, the
+      applied mathematics graduate cohort of 2022 for fun times and being awesome,
+      and last but not least the Department of Mathematics and Statistics for
+      providing the education that ultimately made this thesis possible.
+    \end{acknowledgments}
+
+    \input{body}
+    \nocite{*}
+    \bibliographystyle{siammod}
+    \bibliography{thbib}
+    \input{append}
+\end{document}

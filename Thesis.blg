@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Thesis.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: siammod.bst
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+Database file #1: thbib.bib
+Warning--entry type for "item:8" isn't style-file defined
+--line 81 of file thbib.bib
+Warning--empty journal in item:20
+Warning--empty booktitle in item:6
+Warning--empty booktitle in item:9
+You've used 26 entries,
+            2032 wiz_defined-function locations,
+            664 strings with 7364 characters,
+and the built_in function-call counts, 8402 in all, are:
+= -- 785
+> -- 312
+< -- 0
++ -- 129
+- -- 98
+* -- 617
+:= -- 1289
+add.period$ -- 27
+call.type$ -- 26
+change.case$ -- 123
+chr.to.int$ -- 0
+cite$ -- 29
+duplicate$ -- 427
+empty$ -- 683
+format.name$ -- 98
+if$ -- 1827
+int.to.chr$ -- 0
+int.to.str$ -- 26
+missing$ -- 31
+newline$ -- 82
+num.names$ -- 54
+pop$ -- 128
+preamble$ -- 1
+purify$ -- 100
+quote$ -- 0
+skip$ -- 348
+stack$ -- 0
+substring$ -- 551
+swap$ -- 172
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 92
+warning$ -- 3
+while$ -- 83
+width$ -- 28
+write$ -- 233
+(There were 4 warnings)
