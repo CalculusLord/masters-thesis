@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from numerical_solvers_and_models import *
 
 
 def table_of_rbf_funs(shandle):
@@ -65,13 +66,13 @@ def fill_distance_compute(ipts, mpts):
 
 
 def shape_parameter_tuner(ipts, shandle):
-    emin = 8.
-    emax = 20.
+    emin = 10.
+    emax = 100.
     epvals = np.linspace(emin, emax, 101)
     myrbf = table_of_rbf_funs(shandle)
     dist = distance_matrix(ipts)
-
-    testfunc = lambda x, y, z: np.sinc(x) * np.sinc(y) * np.sinc(z)
+    freq = 1.
+    testfunc = lambda x, y, z: np.sinc(freq*x) * np.sinc(freq*y) * np.sinc(freq*z)
     rhs = testfunc(ipts[:, 0], ipts[:, 1], ipts[:, 2])
     max_error = np.zeros(epvals.size)
     for i in range(epvals.size):
@@ -81,7 +82,7 @@ def shape_parameter_tuner(ipts, shandle):
         max_error[i] = np.linalg.norm(error_func, np.inf)
     opt_ind = np.argmin(max_error)
     opt_eps = epvals[opt_ind]
-    plt.plot(epvals, np.ma.log10(max_error))
+    #plt.plot(epvals, np.ma.log10(max_error))
     return opt_eps
 
 
@@ -92,7 +93,9 @@ def my_rbf_interpolator(ipts, fipts, qpt, shandle, epsilon):
     dist = distance_matrix(ipts)
     phimat = myrbf(dist, epsilon)
 
-    cvals = np.linalg.solve(phimat, fipts)
+    u, s, vh = np.linalg.svd(phimat, full_matrices='False')
+    cvals = np.real(np.conj(vh.T) @ np.diag(1./s) @ np.conj(u.T) @ fipts)
+    #cvals = np.linalg.solve(phimat, fipts)
 
     jacmat = np.zeros((3, 3), dtype=np.float64)
     dqdxj = np.tile(np.reshape(qpt, (1, 3)), (nfvls, 1)) - ipts
@@ -123,10 +126,42 @@ def jacobian_maker(reddata, shandle, indices, dt, epval, jj):
     NTT = np.shape(reddata)[1]
     yloc = reddata[:, jj]
     nnindices = indices[jj]
-    ipts = reddata[:, nnindices]
-    fwdvls = reddata[:, np.mod(nnindices + np.ones(np.size(nnindices), dtype=int), NTT)]
-    bwdvls = reddata[:, np.mod(nnindices - np.ones(np.size(nnindices), dtype=int), NTT)]
+    indsupper = nnindices + np.ones(np.size(nnindices), dtype=int) < NTT
+    indslower = nnindices - np.ones(np.size(nnindices), dtype=int) >= 0
+    indskp = indsupper * indslower
+    nnindices_clip = nnindices[indskp]
+    ipts = reddata[:, nnindices_clip]
+    fwdvls = reddata[:, nnindices_clip + np.ones(np.size(nnindices_clip), dtype=int)]
+    bwdvls = reddata[:, nnindices_clip - np.ones(np.size(nnindices_clip), dtype=int)]
     fipts = (fwdvls - bwdvls) / (2. * dt)
     jacmat, cval = my_rbf_interpolator(ipts.T, fipts.T, yloc + dstp * np.ones(3, dtype=np.float64), shandle, epval)
     return jacmat, cval
 
+
+def centered_diff_test(reddata, indices, dt, jj, sys_handle, params):
+    NTT = np.shape(reddata)[1]
+    nnindices = indices[jj]
+    indsupper = nnindices + np.ones(np.size(nnindices), dtype=int) < NTT
+    indslower = nnindices - np.ones(np.size(nnindices), dtype=int) >= 0
+    indskp = indsupper * indslower
+    nnindices_clip = nnindices[indskp]
+    ipts = reddata[:, nnindices_clip]
+    fwdvls = reddata[:, nnindices_clip + np.ones(np.size(nnindices_clip), dtype=int)]
+    bwdvls = reddata[:, nnindices_clip - np.ones(np.size(nnindices_clip), dtype=int)]
+    fipts = (fwdvls - bwdvls) / (2. * dt)
+    fiptsexact = np.zeros((np.shape(ipts)[0], np.shape(ipts)[1]), dtype=np.float64)
+
+    if sys_handle == 'Lorenz':
+        rval = params[0]
+        sigma = params[1]
+        bval = params[2]
+        for ll in range(np.shape(ipts)[1]):
+            fiptsexact[:, ll] = lorenz(ipts[:, ll], sigma, rval, bval)
+    elif sys_handle == 'Rossler':
+        aval = params[0]
+        bval = params[1]
+        cval = params[2]
+        for ll in range(np.shape(ipts)[1]):
+            fiptsexact[:, ll] = rossler(ipts[:, ll], aval, bval, cval)
+
+    return [np.linalg.norm(fipts - fiptsexact)/np.linalg.norm(fiptsexact), np.linalg.norm(fiptsexact)]

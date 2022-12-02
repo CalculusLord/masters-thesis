@@ -25,7 +25,7 @@ def vanderpol(lhs,mu):
     return rhs
 
 
-def lorentz(lhs,sigma,rval,bval):
+def lorenz(lhs,sigma,rval,bval):
     y1, y2, y3 = lhs[0], lhs[1], lhs[2]
     rhs = np.zeros(3, dtype=np.float64)
     rhs[0] = sigma*(y2-y1)
@@ -34,7 +34,7 @@ def lorentz(lhs,sigma,rval,bval):
     return rhs
 
 
-def lorentz_kba(lhs,a,b,F,G):
+def lorenz_kba(lhs,a,b,F,G):
     y1, y2, y3 = lhs[0], lhs[1], lhs[2]
     rhs = np.zeros(3, dtype=np.float64)
     rhs[0] = -y2**2.-y3**2.-a*(y1-F)
@@ -114,7 +114,7 @@ def rossler_lyupanov_solver(yt, aval, cval, dt):
 
     for jj in range(NT-1):
         jac_mat[2, 0] = yt[2, jj]
-        jac_mat[2, 1] = yt[0, jj]-cval
+        jac_mat[2, 2] = yt[0, jj]-cval
 
         jupdate = lambda uvec: jac_mat @ uvec
         unext = np.zeros((3, 3), dtype=np.float64)
