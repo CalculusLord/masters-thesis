@@ -1,2 +1,4 @@
-# masters-thesis
-The main portion of the code is found in the Jupyter notebook
+# Master's Thesis
+This project explores a data-driven method for the computation of Lyapunov exponents for dynamical systems
+using radial basis function interpolation. Further details are discussed in Thesis.tex and
+Thesis Notebook.ipynb
